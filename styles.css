@@ -1,0 +1,656 @@
+/* Base Styles */
+:root {
+    --blue-50: #f0f4ff;
+    --blue-100: #d9e2ff;
+    --blue-500: #3a4bff;
+    --blue-600: #2c34f5;
+    --blue-700: #2328d8;
+    --gray-50: #f9fafb;
+    --gray-100: #f3f4f6;
+    --gray-200: #e5e7eb;
+    --gray-300: #d1d5db;
+    --gray-400: #9ca3af;
+    --gray-500: #6b7280;
+    --gray-600: #4b5563;
+    --gray-700: #374151;
+    --gray-800: #1f2937;
+    --gray-900: #111827;
+    --white: #ffffff;
+    --black: #000000;
+    --border-radius: 0.5rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.5;
+    color: var(--gray-800);
+    background-color: var(--white);
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+.text-blue {
+    color: var(--blue-600);
+}
+
+.section-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.section-title.light {
+    color: var(--white);
+}
+
+/* Buttons */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1.5rem;
+    border-radius: 9999px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.btn i {
+    margin-left: 0.5rem;
+}
+
+.btn-primary {
+    background-color: var(--blue-600);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background-color: var(--blue-700);
+}
+
+.btn-phone {
+    background-color: var(--white);
+    color: var(--blue-600);
+    border-radius: 9999px;
+}
+
+.btn-phone:hover {
+    background-color: var(--gray-100);
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: var(--white);
+    border: 1px solid var(--white);
+}
+
+.btn-outline:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Header/Navbar */
+.header {
+    background-color: var(--blue-50);
+    padding: 1rem 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: block;
+}
+
+.nav-desktop {
+    display: none;
+}
+
+.nav-link {
+    margin: 0 1rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--blue-600);
+}
+
+.btn-phone {
+    display: none;
+}
+
+.menu-toggle {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--gray-800);
+}
+
+.nav-mobile {
+    display: none;
+    flex-direction: column;
+    padding: 1rem 0;
+}
+
+.nav-mobile .nav-link {
+    padding: 0.5rem 0;
+    margin: 0;
+}
+
+.nav-mobile.active {
+    display: flex;
+}
+
+.mobile-btn {
+    margin-top: 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Hero Section */
+.hero {
+    background-color: var(--blue-50);
+    padding: 3rem 0;
+    overflow: hidden;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero-text {
+    text-align: center;
+    margin-bottom: 2rem;
+    z-index: 1;
+}
+
+.subtitle {
+    color: var(--gray-600);
+    margin-bottom: 2rem;
+}
+
+.email-signup {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    max-width: 500px;
+}
+
+.input-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.email-input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--gray-300);
+    border-radius: var(--border-radius);
+    background-color: var(--white);
+}
+
+.hero-image {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+/* Problems Section */
+.problems {
+    padding: 4rem 0;
+    background-color: var(--white);
+}
+
+.problems-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.problem-card {
+    border: 1px solid var(--gray-200);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+}
+
+.problem-number {
+    color: var(--blue-600);
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.problem-title {
+    margin-bottom: 1rem;
+}
+
+.problem-text {
+    color: var(--gray-600);
+}
+
+/* Services Section */
+.services {
+    padding: 4rem 0;
+    background-color: var(--gray-50);
+}
+
+.services-container {
+    background-color: var(--gray-900);
+    color: var(--white);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+}
+
+.service-item {
+    padding: 1.5rem 0;
+}
+
+.service-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.service-title {
+    margin-bottom: 1rem;
+}
+
+.service-text {
+    color: var(--gray-300);
+}
+
+.service-divider {
+    height: 1px;
+    background-color: var(--gray-700);
+    width: 100%;
+}
+
+.free-consultation {
+    margin-top: 2rem;
+    background-color: var(--blue-600);
+    border-radius: var(--border-radius);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.consultation-text {
+    font-weight: 700;
+}
+
+/* Approach Section */
+.approach {
+    padding: 4rem 0;
+    background-color: var(--white);
+}
+
+.approach-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.approach-text {
+    text-align: center;
+}
+
+.approach-text p {
+    color: var(--gray-600);
+    margin-bottom: 1rem;
+}
+
+.approach-image {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+/* Success Stories Section */
+.success-stories {
+    padding: 4rem 0;
+    background-color: var(--gray-900);
+    color: var(--white);
+}
+
+.stories-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.story-card {
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+}
+
+.story-card.blue {
+    background-color: var(--blue-600);
+}
+
+.story-card.dark {
+    background-color: var(--gray-800);
+}
+
+.story-text {
+    margin-bottom: 1rem;
+}
+
+.story-author {
+    font-weight: 700;
+}
+
+/* FAQ Section */
+.faq {
+    padding: 4rem 0;
+    background-color: var(--gray-50);
+}
+
+.accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.accordion-item {
+    border: 1px solid var(--gray-200);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+.accordion-button {
+    width: 100%;
+    padding: 1rem;
+    text-align: left;
+    background-color: var(--white);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 500;
+}
+
+.accordion-button i {
+    transition: transform 0.3s ease;
+}
+
+.accordion-button.active i {
+    transform: rotate(180deg);
+}
+
+.accordion-content {
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    background-color: var(--white);
+}
+
+.accordion-content.active {
+    padding: 1rem;
+    max-height: 500px;
+}
+
+.accordion-content p {
+    color: var(--gray-600);
+    margin-bottom: 0;
+}
+
+/* Contact Section */
+.contact {
+    padding: 4rem 0;
+    background-color: var(--gray-900);
+    color: var(--white);
+}
+
+.contact-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.contact-info p {
+    margin-bottom: 1.5rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.social-link {
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    transition: color 0.3s ease;
+}
+
+.social-link:hover {
+    color: var(--blue-400);
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.contact-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: var(--blue-600);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+}
+
+.contact-form {
+    background-color: var(--gray-800);
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+}
+
+.form-row {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: var(--gray-700);
+    border: 1px solid var(--gray-600);
+    border-radius: var(--border-radius);
+    color: var(--white);
+    margin-bottom: 1rem;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: var(--gray-400);
+}
+
+.contact-form button {
+    width: 100%;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--gray-900);
+    color: var(--white);
+    padding: 2rem 0;
+    text-align: center;
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+        text-align: left;
+    }
+
+    .nav-desktop {
+        display: flex;
+    }
+
+    .btn-phone {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+
+    .hero-content {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .hero-text {
+        text-align: left;
+        margin-bottom: 0;
+        flex: 1;
+    }
+
+    .hero-image {
+        flex: 1;
+    }
+
+    .email-signup {
+        flex-direction: row;
+    }
+
+    .problems-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .service-content {
+        flex-direction: row;
+        gap: 2rem;
+    }
+
+    .service-title {
+        flex: 1;
+        margin-bottom: 0;
+    }
+
+    .service-text {
+        flex: 2;
+    }
+
+    .free-consultation {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .approach-content {
+        flex-direction: row;
+        text-align: left;
+    }
+
+    .approach-text {
+        flex: 1;
+        text-align: left;
+    }
+
+    .approach-image {
+        flex: 1;
+    }
+
+    .stories-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .contact-content {
+        flex-direction: row;
+    }
+
+    .contact-info {
+        flex: 1;
+    }
+
+    .contact-form {
+        flex: 1;
+    }
+
+    .form-row {
+        flex-direction: row;
+    }
+}
